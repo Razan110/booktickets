@@ -18,7 +18,12 @@ List<Map<String, dynamic>> hotelList = [
     'price': 234
   }
 ];
-
+var cabin = [
+  'Economy',
+  'Premium economy',
+  'Business',
+  'First-class',
+];
 List<Map<String, dynamic>> ticketList = [
   {
     'from': {

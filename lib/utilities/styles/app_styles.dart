@@ -9,6 +9,8 @@ class Styles {
   static Color orangeColor = const Color(0xfff37b67);
   static Color grayColor = const Color(0xFFBEBEBE);
   static Color lightGrayColor = const Color(0xFFD8D8D8);
+  static Color contanierBg = const Color(0xfff4f6fd);
+  static Color checkBoxColor = const Color(0xff526799);
   static TextStyle textStyle = TextStyle(
     fontSize: 16,
     color: textColor,
@@ -39,4 +41,5 @@ class Styles {
     color: Colors.grey.shade500,
     fontWeight: FontWeight.bold,
   );
+  
 }
