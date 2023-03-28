@@ -1,6 +1,7 @@
 import 'package:booktickets/utilities/app_info_list.dart';
 import 'package:booktickets/utilities/styles/app_layout.dart';
 import 'package:booktickets/utilities/styles/app_styles.dart';
+import 'package:booktickets/utilities/styles/bottom_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 //import 'package:syncfusion_flutter_datepicker/datepicker.dart';
@@ -271,22 +272,10 @@ class _CheckBoxContainerState extends State<CheckBoxContainer> {
                 ),
               ),
               Gap(AppLayout.getWidth(5)),
-
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  OutlinedButton(
-                    onPressed: () {
-                      // Respond to button press
-                    },
-                    child: Text(
-                      'Search',
-                      style: Styles.headLineStyle
-                          .copyWith(color: Styles.orangeColor),
-                    ),
-                  ),
-                  //const SizedBox(height: 8.0, width: 80),
-                ],
+              const BottomSheetB(
+                bottomSheetText: 'Search',
+                bottomSheetHight: 135,
+                bottomSheetWidth: 20,
               ),
             ],
           ),
