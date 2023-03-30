@@ -24,6 +24,7 @@ var cabin = [
   'Business',
   'First-class',
 ];
+
 List<Map<String, dynamic>> ticketList = [
   {
     'from': {

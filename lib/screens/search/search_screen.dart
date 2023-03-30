@@ -1,7 +1,7 @@
 import 'package:booktickets/utilities/styles/app_layout.dart';
 import 'package:booktickets/utilities/styles/app_styles.dart';
 import 'package:booktickets/widgets/checkBox_container.dart';
-import 'package:booktickets/widgets/icon_text.dart';
+import 'package:booktickets/widgets/switch_bottom.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
@@ -19,11 +19,6 @@ class SearchScreen extends StatelessWidget {
             vertical: AppLayout.getHeight(20)),
         children: [
           Gap(AppLayout.getHeight(40)),
-          // Text(
-          //   'What are\n Looking for?',
-          //   style: Styles.headLineStyle.copyWith(fontSize: 35),
-          // ),
-          // Gap(AppLayout.getHeight(20)),
           FittedBox(
             child: Container(
               padding: const EdgeInsets.all(3.5),
@@ -70,20 +65,12 @@ class SearchScreen extends StatelessWidget {
             ),
           ),
           Gap(AppLayout.getHeight(25)),
-          // //Depature Container
-          // const AppIcons(
-          //   contanierText: 'Depature',
-          //   icon: Icons.flight_takeoff,
-          // ),
-          // //
-          // Gap(AppLayout.getHeight(15)),
-          // //Arrival Container
-          // const AppIcons(
-          //   contanierText: 'Arrival',
-          //   icon: Icons.flight_land_rounded,
-          // ),
-          // //
           const CheckBoxContainer(),
+          Gap(AppLayout.getHeight(30)),
+          const SwitchBottom(),
+          Gap(AppLayout.getHeight(30)),
+          Text('More for you', style: Styles.headLineStyle2),
+          Container(),
         ],
       ),
     );

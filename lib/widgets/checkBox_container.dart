@@ -1,7 +1,8 @@
 import 'package:booktickets/utilities/app_info_list.dart';
 import 'package:booktickets/utilities/styles/app_layout.dart';
 import 'package:booktickets/utilities/styles/app_styles.dart';
-import 'package:booktickets/utilities/styles/bottom_sheet.dart';
+import 'package:booktickets/widgets/bottom_sheet.dart';
+import 'package:booktickets/widgets/text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 //import 'package:syncfusion_flutter_datepicker/datepicker.dart';
@@ -26,7 +27,7 @@ class _CheckBoxContainerState extends State<CheckBoxContainer> {
 
   var currentValue;
 
-  int _itemCountAdults = 0;
+  int _itemCountAdults = 1;
   int _itemCountChildren = 0;
   @override
   Widget build(BuildContext context) {
@@ -86,72 +87,27 @@ class _CheckBoxContainerState extends State<CheckBoxContainer> {
                             },
                             activeColor: Styles.checkBoxColor,
                           ),
-                          const Text('Multi-city  '),
+                          const Text('Multi-city'),
+                          Gap(AppLayout.getWidth(7)),
                         ],
                       )),
                 ],
               ),
               //
               //second column
-              Container(
-                margin: const EdgeInsets.only(top: 10, left: 16),
-                child: Row(
-                  children: [
-                    const Icon(
-                      Icons.flight_takeoff,
-                    ),
-                    Gap(AppLayout.getWidth(25)),
-                    Expanded(
-                      child: TextField(
-                        decoration: InputDecoration(
-                          hintText: 'Where from?',
-                          hintStyle: TextStyle(
-                            fontWeight: FontWeight.w300,
-                            color: Styles.grayColor,
-                          ),
-                          enabledBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(
-                              width: 1,
-                              color: Styles.orangeColor,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
+
+              const TextFieldContainer(
+                hintTextC: 'Where from?',
+                icon: Icons.flight_takeoff,
               ),
 
-              //Date
               Gap(AppLayout.getWidth(5)),
-              Container(
-                margin: const EdgeInsets.only(top: 10, left: 16),
-                child: Row(
-                  children: [
-                    const Icon(
-                      Icons.flight_land_outlined,
-                    ),
-                    Gap(AppLayout.getWidth(25)),
-                    Expanded(
-                      child: TextField(
-                        decoration: InputDecoration(
-                          hintText: 'Where to?',
-                          hintStyle: TextStyle(
-                            fontWeight: FontWeight.w300,
-                            color: Styles.grayColor,
-                          ),
-                          enabledBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(
-                              width: 1,
-                              color: Styles.orangeColor,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
+
+              const TextFieldContainer(
+                hintTextC: 'Where to?',
+                icon: Icons.flight_land_outlined,
               ),
+              //Date
 
               Container(
                 margin: const EdgeInsets.only(top: 10, left: 16),
@@ -218,7 +174,7 @@ class _CheckBoxContainerState extends State<CheckBoxContainer> {
                 ),
               ),
               Container(
-                margin: const EdgeInsets.only(top: 10, left: 35, right: 30),
+                margin: const EdgeInsets.only(top: 10, left: 46, right: 30),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: const [
@@ -229,13 +185,13 @@ class _CheckBoxContainerState extends State<CheckBoxContainer> {
                 ),
               ),
               Container(
-                margin: const EdgeInsets.only(top: 10, left: 25, right: 20),
+                margin: const EdgeInsets.only(top: 10, left: 40, right: 20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Row(
                       children: <Widget>[
-                        _itemCountAdults == 0
+                        _itemCountAdults != 1 || _itemCountAdults == 1
                             ? IconButton(
                                 icon: const Icon(Icons.remove),
                                 onPressed: () =>
@@ -252,7 +208,7 @@ class _CheckBoxContainerState extends State<CheckBoxContainer> {
                     //Gap(AppLayout.getWidth(60)),
                     Row(
                       children: <Widget>[
-                        _itemCountChildren == 0
+                        _itemCountChildren != 0 || _itemCountChildren == 0
                             ? IconButton(
                                 icon: const Icon(Icons.remove),
                                 onPressed: () =>
@@ -276,6 +232,7 @@ class _CheckBoxContainerState extends State<CheckBoxContainer> {
                 bottomSheetText: 'Search',
                 bottomSheetHight: 135,
                 bottomSheetWidth: 20,
+                bottomSheetTextbuilder: 'Louding...',
               ),
             ],
           ),
