@@ -12,8 +12,8 @@ class HotelView extends StatelessWidget {
     final size = AppLayout.getSize(context);
     return Container(
       width: size.width * 0.6,
-      height: AppLayout.getHeight(350),
-      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 17),
+      height: AppLayout.getHeight(320),
+      padding: const EdgeInsets.symmetric(horizontal: 2, vertical: 2),
       margin: const EdgeInsets.only(top: 5, right: 16),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(24),
@@ -32,7 +32,10 @@ class HotelView extends StatelessWidget {
           Container(
             height: AppLayout.getHeight(180),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(24),
+              borderRadius: const BorderRadius.only(
+                topLeft: Radius.circular(24),
+                topRight: Radius.circular(24),
+              ),
               color: Styles.primaryColor,
               image: DecorationImage(
                 fit: BoxFit.cover,
@@ -40,17 +43,17 @@ class HotelView extends StatelessWidget {
               ),
             ),
           ),
-          const Gap(30),
+          Gap(AppLayout.getHeight(30)),
           Text(
             hotel['place'],
             style: Styles.headLineStyle2.copyWith(color: Styles.grayColor),
           ),
-          const Gap(10),
+          Gap(AppLayout.getHeight(10)),
           Text(
             hotel['destinatin'],
             style: Styles.textStyleSmall.copyWith(color: Styles.lightGrayColor),
           ),
-          const Gap(10),
+          Gap(AppLayout.getHeight(10)),
           Text(
             "${hotel['price']}\$ per night",
             style: Styles.headLineStyle2.copyWith(color: Styles.lightGrayColor),

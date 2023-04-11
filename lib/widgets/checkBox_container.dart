@@ -33,6 +33,7 @@ class _CheckBoxContainerState extends State<CheckBoxContainer> {
   Widget build(BuildContext context) {
     // final size = AppLayout.getSize(context);
     return Container(
+      margin: const EdgeInsets.only(left: 1, right: 1, top: 1, bottom: 1),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(5),
         color: Styles.contanierBg,
@@ -48,9 +49,10 @@ class _CheckBoxContainerState extends State<CheckBoxContainer> {
                       decoration: BoxDecoration(
                         border: Border(
                           bottom: BorderSide(
-                              width: 2,
-                              color: Styles.orangeColor,
-                              style: BorderStyle.solid), //BorderSide
+                            width: 2,
+                            color: Styles.orangeColor,
+                            style: BorderStyle.solid,
+                          ), //BorderSide
                         ),
                       ),
                       child: Row(
@@ -88,7 +90,7 @@ class _CheckBoxContainerState extends State<CheckBoxContainer> {
                             activeColor: Styles.checkBoxColor,
                           ),
                           const Text('Multi-city'),
-                          Gap(AppLayout.getWidth(7)),
+                          Gap(AppLayout.getWidth(4.9)),
                         ],
                       )),
                 ],
@@ -230,7 +232,7 @@ class _CheckBoxContainerState extends State<CheckBoxContainer> {
               Gap(AppLayout.getWidth(5)),
               const BottomSheetB(
                 bottomSheetText: 'Search',
-                bottomSheetHight: 135,
+                bottomSheetHight: 134,
                 bottomSheetWidth: 20,
                 bottomSheetTextbuilder: 'Louding...',
               ),

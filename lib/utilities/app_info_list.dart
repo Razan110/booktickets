@@ -69,3 +69,14 @@ List<Map<String, dynamic>> ticketList = [
     'number': 29
   },
 ];
+
+List<Map<String, dynamic>> moreForUList = [
+  {
+    'DisctiptionHeadLin': 'Extended stays',
+    'Disctiption': 'Live your life anywhere with\n30+night stays',
+    'DisctiptionHeadLin2': 'Save 15% worldwide',
+    'Disctiption2': 'Discover dream destinations\nfor less with Gateaway Deals',
+    'DisctiptionHeadLin3': 'Travel articles',
+    'Disctiption3': 'Live your life anywhere\nwith 60+ night stays',
+  },
+];
