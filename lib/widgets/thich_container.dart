@@ -1,9 +1,9 @@
+import 'package:booktickets/utilities/styles/app_styles.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class ThichContainer extends StatelessWidget {
-  const ThichContainer({super.key});
+  final bool? isColor;
+  const ThichContainer({Key? key, this.isColor}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class ThichContainer extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
         border: Border.all(
           width: 2.5,
-          color: Colors.white,
+          color: isColor == null ? Colors.white : Styles.orangeColor,
         ),
       ),
     );

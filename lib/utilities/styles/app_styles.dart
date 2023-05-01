@@ -41,5 +41,9 @@ class Styles {
     color: Colors.grey.shade500,
     fontWeight: FontWeight.bold,
   );
-  
+  static TextStyle notBoldheadLineStyle4 = TextStyle(
+    fontSize: 14,
+    color: Colors.grey.shade500,
+    fontWeight: FontWeight.w500,
+  );
 }

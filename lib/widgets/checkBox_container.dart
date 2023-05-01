@@ -36,7 +36,7 @@ class _CheckBoxContainerState extends State<CheckBoxContainer> {
       margin: const EdgeInsets.only(left: 1, right: 1, top: 1, bottom: 1),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(5),
-        color: Styles.contanierBg,
+        color: Colors.white,
       ),
       child: Column(
         children: [
@@ -231,9 +231,9 @@ class _CheckBoxContainerState extends State<CheckBoxContainer> {
               ),
               Gap(AppLayout.getWidth(5)),
               const BottomSheetB(
-                bottomSheetText: 'Search',
-                bottomSheetHight: 134,
-                bottomSheetWidth: 20,
+                bottomSheetText: 'Find tickets',
+                bottomSheetHight: 115,
+                bottomSheetWidth: 15,
                 bottomSheetTextbuilder: 'Louding...',
               ),
             ],

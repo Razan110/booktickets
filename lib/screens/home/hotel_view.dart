@@ -44,19 +44,30 @@ class HotelView extends StatelessWidget {
             ),
           ),
           Gap(AppLayout.getHeight(30)),
-          Text(
-            hotel['place'],
-            style: Styles.headLineStyle2.copyWith(color: Styles.grayColor),
-          ),
-          Gap(AppLayout.getHeight(10)),
-          Text(
-            hotel['destinatin'],
-            style: Styles.textStyleSmall.copyWith(color: Styles.lightGrayColor),
-          ),
-          Gap(AppLayout.getHeight(10)),
-          Text(
-            "${hotel['price']}\$ per night",
-            style: Styles.headLineStyle2.copyWith(color: Styles.lightGrayColor),
+          Padding(
+            padding: const EdgeInsets.only(left: 8.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  hotel['place'],
+                  style:
+                      Styles.headLineStyle2.copyWith(color: Styles.grayColor),
+                ),
+                Gap(AppLayout.getHeight(10)),
+                Text(
+                  hotel['destinatin'],
+                  style: Styles.textStyleSmall
+                      .copyWith(color: Styles.lightGrayColor),
+                ),
+                Gap(AppLayout.getHeight(10)),
+                Text(
+                  "${hotel['price']}\$ per night",
+                  style: Styles.headLineStyle2
+                      .copyWith(color: Styles.lightGrayColor),
+                ),
+              ],
+            ),
           ),
         ],
       ),
