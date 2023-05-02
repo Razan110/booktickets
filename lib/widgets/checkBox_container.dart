@@ -90,7 +90,7 @@ class _CheckBoxContainerState extends State<CheckBoxContainer> {
                             activeColor: Styles.checkBoxColor,
                           ),
                           const Text('Multi-city'),
-                          Gap(AppLayout.getWidth(4.9)),
+                          Gap(AppLayout.getWidth(29)),
                         ],
                       )),
                 ],
@@ -169,8 +169,10 @@ class _CheckBoxContainerState extends State<CheckBoxContainer> {
                   children: [
                     Text(
                       'Travillar:',
-                      style:
-                          Styles.headLineStyle3.copyWith(color: Colors.black),
+                      style: Styles.headLineStyle3.copyWith(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                      ),
                     )
                   ],
                 ),

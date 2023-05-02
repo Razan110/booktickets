@@ -3,19 +3,25 @@ List<Map<String, dynamic>> hotelList = [
     'image': 'hotel1.jpeg',
     'place': 'Open Space',
     'destinatin': 'Riyadh',
-    'price': 25
+    'price': 25,
+    'review': '10\\10 Wonderful!(44reviews)',
+    'rating': 'assets/images/rating-2.png',
   },
   {
     'image': 'hotel2.jpeg',
     'place': 'Global Will',
     'destinatin': 'London',
-    'price': 40
+    'price': 40,
+    'review': '7\\10 Amazing!(92reviews)',
+    'rating': 'assets/images/rating.png',
   },
   {
     'image': 'hotel3.jpeg',
     'place': 'Tallest Building',
     'destinatin': 'Dubai',
-    'price': 234
+    'price': 234,
+    'review': '9.5\\10 Excellent!(110reviews)',
+    'rating': 'assets/images/rating-2.png',
   }
 ];
 var cabin = [

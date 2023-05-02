@@ -11,6 +11,7 @@ class Styles {
   static Color lightGrayColor = const Color(0xFFD8D8D8);
   static Color contanierBg = const Color(0xfff4f6fd);
   static Color checkBoxColor = const Color(0xff526799);
+  static Color tranColor = const Color(0x00FDFEFE);
   static TextStyle textStyle = TextStyle(
     fontSize: 16,
     color: textColor,
@@ -44,6 +45,11 @@ class Styles {
   static TextStyle notBoldheadLineStyle4 = TextStyle(
     fontSize: 14,
     color: Colors.grey.shade500,
+    fontWeight: FontWeight.w500,
+  );
+  static TextStyle listItems = const TextStyle(
+    fontSize: 19,
+    color: Color(0xFF000000),
     fontWeight: FontWeight.w500,
   );
 }

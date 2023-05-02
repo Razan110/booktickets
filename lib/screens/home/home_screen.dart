@@ -12,6 +12,13 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(10.0),
+        child: AppBar(
+          elevation: 0,
+          backgroundColor: Styles.tranColor,
+        ),
+      ),
       backgroundColor: Styles.bgColor,
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -133,7 +140,9 @@ class HomeScreen extends StatelessWidget {
               padding: const EdgeInsets.only(left: 20),
               child: Row(
                 children: hotelList
-                    .map((singlHotel) => HotelView(hotel: singlHotel))
+                    .map(
+                      (singlhotel) => HotelView(hotel: singlhotel),
+                    )
                     .toList(),
               ),
             ),

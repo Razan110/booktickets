@@ -5,19 +5,23 @@ import 'package:gap/gap.dart';
 
 class HotelView extends StatelessWidget {
   final Map<String, dynamic> hotel;
-  const HotelView({Key? key, required this.hotel}) : super(key: key);
+
+  const HotelView({
+    Key? key,
+    required this.hotel,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final size = AppLayout.getSize(context);
     return Container(
       width: size.width * 0.6,
-      height: AppLayout.getHeight(320),
+      height: AppLayout.getHeight(350),
       padding: const EdgeInsets.symmetric(horizontal: 2, vertical: 2),
       margin: const EdgeInsets.only(top: 5, right: 16),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(24),
-        color: Styles.primaryColor,
+        color: Color(0xB9FEF8F8),
         boxShadow: [
           BoxShadow(
             color: Colors.grey.shade200,
@@ -45,26 +49,33 @@ class HotelView extends StatelessWidget {
           ),
           Gap(AppLayout.getHeight(30)),
           Padding(
-            padding: const EdgeInsets.only(left: 8.0),
+            padding: const EdgeInsets.only(left: 5),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  hotel['place'],
-                  style:
-                      Styles.headLineStyle2.copyWith(color: Styles.grayColor),
-                ),
+                Text(hotel['place'], style: Styles.headLineStyle2),
                 Gap(AppLayout.getHeight(10)),
+                Row(
+                  children: [
+                    Text(
+                      hotel['destinatin'],
+                      style: Styles.textStyleSmall.copyWith(color: Colors.grey),
+                    ),
+                    Gap(AppLayout.getWidth(10)),
+                    Text("${hotel['price']}\$ per night",
+                        style: Styles.textStyleSmall),
+                  ],
+                ),
+                Gap(AppLayout.getHeight(5)),
                 Text(
-                  hotel['destinatin'],
+                  hotel['review'],
                   style: Styles.textStyleSmall
-                      .copyWith(color: Styles.lightGrayColor),
+                      .copyWith(fontWeight: FontWeight.bold),
                 ),
-                Gap(AppLayout.getHeight(10)),
-                Text(
-                  "${hotel['price']}\$ per night",
-                  style: Styles.headLineStyle2
-                      .copyWith(color: Styles.lightGrayColor),
+                Image.asset(
+                  hotel['rating'],
+                  scale: 1,
+                  height: 71,
                 ),
               ],
             ),

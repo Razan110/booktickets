@@ -15,13 +15,20 @@ class SearchScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = AppLayout.getSize(context);
     return Scaffold(
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(10.0),
+        child: AppBar(
+          elevation: 0,
+          backgroundColor: Styles.tranColor,
+        ),
+      ),
       backgroundColor: Styles.bgColor,
       body: ListView(
         padding: EdgeInsets.symmetric(
             horizontal: AppLayout.getWidth(20),
             vertical: AppLayout.getHeight(20)),
         children: [
-          Gap(AppLayout.getHeight(40)),
+          //Gap(AppLayout.getHeight()),
           const TicketsTabs(firstTab: 'Airline tickets', secondTap: 'Hotels'),
           Gap(AppLayout.getHeight(25)),
           Container(

@@ -16,6 +16,13 @@ class TicketsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = AppLayout.getSize(context);
     return Scaffold(
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(5.0),
+        child: AppBar(
+          elevation: 0,
+          backgroundColor: Styles.tranColor,
+        ),
+      ),
       backgroundColor: Styles.bgColor,
       body: Stack(
         children: [
