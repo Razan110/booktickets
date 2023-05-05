@@ -1,4 +1,6 @@
 import 'package:booktickets/screens/home/hotel_view.dart';
+import 'package:booktickets/utilities/styles/app_layout.dart';
+import 'package:booktickets/widgets/text_field.dart';
 import 'package:booktickets/widgets/tickets_view.dart';
 import 'package:booktickets/utilities/app_info_list.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
@@ -74,9 +76,18 @@ class HomeScreen extends StatelessWidget {
                           FluentSystemIcons.ic_fluent_search_regular,
                           color: Color(0xffbfc205),
                         ),
-                        Text(
-                          'Search',
-                          style: Styles.headLineStyle4,
+                        Gap(AppLayout.getWidth(9)),
+                        Expanded(
+                          child: TextField(
+                            decoration: InputDecoration(
+                              hintText: 'Search',
+                              hintStyle: TextStyle(
+                                fontWeight: FontWeight.w300,
+                                color: Styles.grayColor,
+                              ),
+                              border: InputBorder.none,
+                            ),
+                          ),
                         ),
                       ],
                     ),

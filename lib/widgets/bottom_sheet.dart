@@ -6,14 +6,18 @@ class BottomSheetB extends StatelessWidget {
   final String bottomSheetTextbuilder;
   final double bottomSheetWidth;
   final double bottomSheetHight;
+  final double fontSize;
+  //final Styles textStyle;
 
-  const BottomSheetB(
-      {Key? key,
-      required this.bottomSheetText,
-      required this.bottomSheetWidth,
-      required this.bottomSheetHight,
-      required this.bottomSheetTextbuilder})
-      : super(key: key);
+  const BottomSheetB({
+    Key? key,
+    required this.bottomSheetText,
+    required this.bottomSheetWidth,
+    required this.bottomSheetHight,
+    required this.bottomSheetTextbuilder,
+    required this.fontSize,
+    // required this.textStyle,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,19 +25,16 @@ class BottomSheetB extends StatelessWidget {
       child: Row(
         children: [
           ElevatedButton(
-            child: Text(
-              bottomSheetText,
-              style: Styles.headLineStyle2.copyWith(color: Styles.orangeColor),
-            ),
             style: ElevatedButton.styleFrom(
               backgroundColor: Styles.bgColor,
               padding: EdgeInsets.symmetric(
                 horizontal: bottomSheetHight,
                 vertical: bottomSheetWidth,
               ),
-              textStyle: const TextStyle(
-                fontSize: 23,
+              textStyle: TextStyle(
+                fontSize: fontSize,
                 fontWeight: FontWeight.bold,
+                shadows: null,
               ),
             ),
             onPressed: () {
@@ -66,6 +67,10 @@ class BottomSheetB extends StatelessWidget {
                 },
               );
             },
+            child: Text(
+              bottomSheetText,
+              style: Styles.headLineStyle2.copyWith(color: Styles.orangeColor),
+            ),
           ),
         ],
       ),

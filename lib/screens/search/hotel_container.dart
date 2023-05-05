@@ -2,19 +2,21 @@ import 'package:booktickets/utilities/app_info_list.dart';
 import 'package:booktickets/utilities/styles/app_layout.dart';
 import 'package:booktickets/utilities/styles/app_styles.dart';
 import 'package:booktickets/widgets/bottom_sheet.dart';
+import 'package:booktickets/widgets/switch_bottom.dart';
 import 'package:booktickets/widgets/text_field.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_switch/flutter_switch.dart';
 import 'package:gap/gap.dart';
 //import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 
-class CheckBoxContainer extends StatefulWidget {
-  const CheckBoxContainer({super.key});
+class HotelContainer extends StatefulWidget {
+  const HotelContainer({super.key});
 
   @override
-  State<CheckBoxContainer> createState() => _CheckBoxContainerState();
+  State<HotelContainer> createState() => _HotelContainerState();
 }
 
-class _CheckBoxContainerState extends State<CheckBoxContainer> {
+class _HotelContainerState extends State<HotelContainer> {
   bool firstItme = false;
   bool secItme = false;
   bool thtItme = false;
@@ -31,6 +33,7 @@ class _CheckBoxContainerState extends State<CheckBoxContainer> {
   int _itemCountChildren = 0;
   @override
   Widget build(BuildContext context) {
+    bool status = true;
     // final size = AppLayout.getSize(context);
     return Container(
       margin: const EdgeInsets.only(left: 1, right: 1, top: 1, bottom: 1),
@@ -67,7 +70,8 @@ class _CheckBoxContainerState extends State<CheckBoxContainer> {
                             },
                             activeColor: Styles.checkBoxColor,
                           ),
-                          const Text('Round-trip'),
+                          const Text('Hotels'),
+                          Gap(AppLayout.getWidth(20)),
                           Checkbox(
                             value: secItme,
                             shape: const CircleBorder(),
@@ -78,7 +82,8 @@ class _CheckBoxContainerState extends State<CheckBoxContainer> {
                             },
                             activeColor: Styles.checkBoxColor,
                           ),
-                          const Text('One-way'),
+                          const Text('Motel'),
+                          Gap(AppLayout.getWidth(25)),
                           Checkbox(
                             value: thtItme,
                             shape: const CircleBorder(),
@@ -89,8 +94,8 @@ class _CheckBoxContainerState extends State<CheckBoxContainer> {
                             },
                             activeColor: Styles.checkBoxColor,
                           ),
-                          const Text('Multi-city'),
-                          Gap(AppLayout.getWidth(29)),
+                          const Text('Airbnb'),
+                          Gap(AppLayout.getWidth(41)),
                         ],
                       )),
                 ],
@@ -99,26 +104,22 @@ class _CheckBoxContainerState extends State<CheckBoxContainer> {
               //second column
 
               const TextFieldContainer(
-                hintTextC: 'Where from?',
-                icon: Icons.flight_takeoff,
+                hintTextC: 'City',
+                icon: Icons.location_city_outlined,
               ),
 
-              Gap(AppLayout.getWidth(5)),
-
-              const TextFieldContainer(
-                hintTextC: 'Where to?',
-                icon: Icons.flight_land_outlined,
-              ),
-              //Date
+              Gap(AppLayout.getHeight(5)),
 
               Container(
                 margin: const EdgeInsets.only(top: 10, left: 16),
                 child: Row(
                   children: [
-                    Text('Date',
-                        style: Styles.headLineStyle4
-                            .copyWith(color: Colors.black)),
-                    Gap(AppLayout.getWidth(25)),
+                    Text(
+                      'Arrival Date:',
+                      style:
+                          Styles.headLineStyle4.copyWith(color: Colors.black),
+                    ),
+                    Gap(AppLayout.getHeight(15)),
                     Expanded(
                       child: TextField(
                         decoration: InputDecoration(
@@ -136,39 +137,72 @@ class _CheckBoxContainerState extends State<CheckBoxContainer> {
                         ),
                       ),
                     ),
+                    Gap(AppLayout.getHeight(15)),
+                    Text(
+                      'Nights:',
+                      style:
+                          Styles.headLineStyle4.copyWith(color: Colors.black),
+                    ),
+                    Gap(AppLayout.getHeight(15)),
+                    Expanded(
+                      child: TextField(
+                        decoration: InputDecoration(
+                          hintText: 'Number',
+                          hintStyle: TextStyle(
+                            fontWeight: FontWeight.w300,
+                            color: Styles.grayColor,
+                          ),
+                          enabledBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                              width: 1,
+                              color: Styles.orangeColor,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Gap(AppLayout.getHeight(20)),
                   ],
                 ),
               ),
+              Gap(AppLayout.getHeight(20)),
               Container(
-                margin: const EdgeInsets.only(top: 15, left: 16),
-                child: Row(
+                margin: const EdgeInsets.only(top: 10, left: 16, right: 16),
+                child: Column(
                   children: [
-                    DropdownButton<String>(
-                      dropdownColor: Styles.contanierBg,
-                      hint: const Text('Cabin class'),
-                      value: currentValue,
-                      items: cabin.map((cabin) {
-                        return DropdownMenuItem<String>(
-                          value: cabin,
-                          child: Text(cabin),
-                        );
-                      }).toList(),
-                      onChanged: (newValue) {
-                        setState(() {
-                          currentValue = newValue;
-                        });
-                      },
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Room Cleaning',
+                          style: Styles.headLineStyle4
+                              .copyWith(color: Colors.black),
+                        ),
+                        const SwitchBottom(),
+                      ],
+                    ),
+                    Gap(AppLayout.getHeight(15)),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Breakfast',
+                          style: Styles.headLineStyle4
+                              .copyWith(color: Colors.black),
+                        ),
+                        const SwitchBottom(),
+                      ],
                     ),
                   ],
                 ),
               ),
-              Gap(AppLayout.getHeight(5)),
+              Gap(AppLayout.getHeight(10)),
               Container(
                 margin: const EdgeInsets.only(top: 15, left: 16),
                 child: Row(
                   children: [
                     Text(
-                      'Travillar:',
+                      'Gustes:',
                       style: Styles.headLineStyle3.copyWith(
                         color: Colors.black,
                         fontWeight: FontWeight.bold,
@@ -231,12 +265,13 @@ class _CheckBoxContainerState extends State<CheckBoxContainer> {
                   ],
                 ),
               ),
-              Gap(AppLayout.getWidth(5)),
+              Gap(AppLayout.getHeight(16)),
               const BottomSheetB(
-                bottomSheetText: 'Find tickets',
-                bottomSheetHight: 115,
+                bottomSheetText: 'Find hotels',
+                bottomSheetHight: 118,
                 bottomSheetWidth: 15,
                 bottomSheetTextbuilder: 'Louding...',
+                fontSize: 14,
               ),
             ],
           ),

@@ -1,10 +1,12 @@
+import 'package:booktickets/screens/search/airline_tickets.dart';
+
 List<Map<String, dynamic>> hotelList = [
   {
     'image': 'hotel1.jpeg',
     'place': 'Open Space',
     'destinatin': 'Riyadh',
     'price': 25,
-    'review': '10\\10 Wonderful!(44reviews)',
+    'review': '10\\10 Wonderful!(44 reviews)',
     'rating': 'assets/images/rating-2.png',
   },
   {
@@ -12,7 +14,7 @@ List<Map<String, dynamic>> hotelList = [
     'place': 'Global Will',
     'destinatin': 'London',
     'price': 40,
-    'review': '7\\10 Amazing!(92reviews)',
+    'review': '7\\10 Amazing!(92 reviews)',
     'rating': 'assets/images/rating.png',
   },
   {
@@ -20,7 +22,7 @@ List<Map<String, dynamic>> hotelList = [
     'place': 'Tallest Building',
     'destinatin': 'Dubai',
     'price': 234,
-    'review': '9.5\\10 Excellent!(110reviews)',
+    'review': '9.5\\10 Excellent!(110 reviews)',
     'rating': 'assets/images/rating-2.png',
   }
 ];
@@ -84,5 +86,12 @@ List<Map<String, dynamic>> moreForUList = [
     'Disctiption2': 'Discover dream destinations\nfor less with Gateaway Deals',
     'DisctiptionHeadLin3': 'Travel articles',
     'Disctiption3': 'Live your life anywhere\nwith 60+ night stays',
+  },
+];
+
+List<Map<String, dynamic>> togleBar = [
+  {
+    'searchFirst': const AirlineTickets(),
+    'searchSecond': const AirlineTickets(),
   },
 ];

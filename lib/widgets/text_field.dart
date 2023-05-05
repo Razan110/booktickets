@@ -5,7 +5,7 @@ import 'package:gap/gap.dart';
 
 class TextFieldContainer extends StatelessWidget {
   final String hintTextC;
-  final IconData icon;
+  final IconData? icon;
   const TextFieldContainer(
       {Key? key, required this.hintTextC, required this.icon})
       : super(key: key);

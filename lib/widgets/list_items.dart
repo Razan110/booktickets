@@ -26,11 +26,17 @@ class ListItems extends StatelessWidget {
               TextButton(
                 style: TextButton.styleFrom(
                   foregroundColor: Colors.black,
+                  fixedSize: const Size(320, 50),
                 ),
                 onPressed: () async {},
-                child: Text(
-                  text,
-                  style: Styles.listItems,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text(
+                      text,
+                      style: Styles.listItems,
+                    ),
+                  ],
                 ),
               ),
             ],

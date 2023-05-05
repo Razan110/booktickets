@@ -14,7 +14,7 @@ class TicketsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = AppLayout.getSize(context);
+    //final size = AppLayout.getSize(context);
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(5.0),
@@ -32,7 +32,7 @@ class TicketsScreen extends StatelessWidget {
               vertical: AppLayout.getHeight(20),
             ),
             children: [
-              Gap(AppLayout.getHeight(40)),
+              // Gap(AppLayout.getHeight(40)),
               const TicketsTabs(firstTab: 'Upcoming', secondTap: 'Previous'),
               Gap(AppLayout.getHeight(20)),
               Container(

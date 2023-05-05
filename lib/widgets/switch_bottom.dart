@@ -12,15 +12,16 @@ class SwitchBottom extends StatefulWidget {
 
 class _SwitchBottomState extends State<SwitchBottom> {
   bool status = false;
+
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
-        Text(
-          'Direct flights only',
-          style: Styles.headLineStyle4.copyWith(color: Colors.black),
-        ),
+        // Text(
+        //   'Direct flights only',
+        //   style: Styles.headLineStyle4.copyWith(color: Colors.black),
+        // ),
         FlutterSwitch(
           width: AppLayout.getWidth(60),
           height: AppLayout.getHeight(30),
