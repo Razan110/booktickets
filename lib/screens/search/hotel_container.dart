@@ -1,11 +1,9 @@
-import 'package:booktickets/utilities/app_info_list.dart';
 import 'package:booktickets/utilities/styles/app_layout.dart';
 import 'package:booktickets/utilities/styles/app_styles.dart';
 import 'package:booktickets/widgets/bottom_sheet.dart';
 import 'package:booktickets/widgets/switch_bottom.dart';
 import 'package:booktickets/widgets/text_field.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_switch/flutter_switch.dart';
 import 'package:gap/gap.dart';
 //import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 
@@ -53,7 +51,7 @@ class _HotelContainerState extends State<HotelContainer> {
                         border: Border(
                           bottom: BorderSide(
                             width: 2,
-                            color: Styles.orangeColor,
+                            color: Styles.blue,
                             style: BorderStyle.solid,
                           ), //BorderSide
                         ),
@@ -131,7 +129,7 @@ class _HotelContainerState extends State<HotelContainer> {
                           enabledBorder: UnderlineInputBorder(
                             borderSide: BorderSide(
                               width: 1,
-                              color: Styles.orangeColor,
+                              color: Styles.blue,
                             ),
                           ),
                         ),
@@ -155,7 +153,7 @@ class _HotelContainerState extends State<HotelContainer> {
                           enabledBorder: UnderlineInputBorder(
                             borderSide: BorderSide(
                               width: 1,
-                              color: Styles.orangeColor,
+                              color: Styles.blue,
                             ),
                           ),
                         ),
@@ -174,7 +172,7 @@ class _HotelContainerState extends State<HotelContainer> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          'Room Cleaning',
+                          'Cleaning service',
                           style: Styles.headLineStyle4
                               .copyWith(color: Colors.black),
                         ),
@@ -186,7 +184,7 @@ class _HotelContainerState extends State<HotelContainer> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          'Breakfast',
+                          'Including breakfast',
                           style: Styles.headLineStyle4
                               .copyWith(color: Colors.black),
                         ),
@@ -268,7 +266,7 @@ class _HotelContainerState extends State<HotelContainer> {
               Gap(AppLayout.getHeight(16)),
               const BottomSheetB(
                 bottomSheetText: 'Find hotels',
-                bottomSheetHight: 118,
+                bottomSheetHight: 113.5,
                 bottomSheetWidth: 15,
                 bottomSheetTextbuilder: 'Louding...',
                 fontSize: 14,

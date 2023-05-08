@@ -17,10 +17,10 @@ class TicketsScreen extends StatelessWidget {
     //final size = AppLayout.getSize(context);
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(5.0),
+        preferredSize: const Size.fromHeight(10.0),
         child: AppBar(
           elevation: 0,
-          backgroundColor: Styles.tranColor,
+          backgroundColor: Styles.darkGrayColor,
         ),
       ),
       backgroundColor: Styles.bgColor,
@@ -147,7 +147,7 @@ class TicketsScreen extends StatelessWidget {
                       data: 'http://github,com/martinovovo',
                       barcode: Barcode.code128(),
                       drawText: false,
-                      color: Styles.textColor,
+                      color: Styles.wightTextColor,
                       width: double.infinity,
                       height: 70,
                     ),

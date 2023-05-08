@@ -36,7 +36,7 @@ class _CheckBoxContainerState extends State<CheckBoxContainer> {
       margin: const EdgeInsets.only(left: 1, right: 1, top: 1, bottom: 1),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(5),
-        color: Colors.white,
+        color: Styles.lightContainer,
       ),
       child: Column(
         children: [
@@ -50,7 +50,7 @@ class _CheckBoxContainerState extends State<CheckBoxContainer> {
                         border: Border(
                           bottom: BorderSide(
                             width: 2,
-                            color: Styles.orangeColor,
+                            color: Styles.blue,
                             style: BorderStyle.solid,
                           ), //BorderSide
                         ),
@@ -65,7 +65,7 @@ class _CheckBoxContainerState extends State<CheckBoxContainer> {
                                 firstItme = val!;
                               });
                             },
-                            activeColor: Styles.checkBoxColor,
+                            activeColor: Styles.blue,
                           ),
                           const Text('Round-trip'),
                           Checkbox(
@@ -130,7 +130,7 @@ class _CheckBoxContainerState extends State<CheckBoxContainer> {
                           enabledBorder: UnderlineInputBorder(
                             borderSide: BorderSide(
                               width: 1,
-                              color: Styles.orangeColor,
+                              color: Styles.blue,
                             ),
                           ),
                         ),
@@ -144,7 +144,7 @@ class _CheckBoxContainerState extends State<CheckBoxContainer> {
                 child: Row(
                   children: [
                     DropdownButton<String>(
-                      dropdownColor: Styles.contanierBg,
+                      dropdownColor: Styles.baig,
                       hint: const Text('Cabin class'),
                       value: currentValue,
                       items: cabin.map((cabin) {
@@ -235,7 +235,7 @@ class _CheckBoxContainerState extends State<CheckBoxContainer> {
               Gap(AppLayout.getWidth(5)),
               const BottomSheetB(
                 bottomSheetText: 'Find tickets',
-                bottomSheetHight: 115,
+                bottomSheetHight: 111,
                 bottomSheetWidth: 15,
                 bottomSheetTextbuilder: 'Louding...',
                 fontSize: 24,

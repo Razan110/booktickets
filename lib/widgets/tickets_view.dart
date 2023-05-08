@@ -73,7 +73,7 @@ class TicketView extends StatelessWidget {
                                           decoration: BoxDecoration(
                                             color: isColor == null
                                                 ? Colors.white
-                                                : Styles.orangeColor,
+                                                : Styles.blue,
                                           ),
                                         ),
                                       ),
@@ -89,7 +89,7 @@ class TicketView extends StatelessWidget {
                                   Icons.local_airport_rounded,
                                   color: isColor == null
                                       ? Colors.white
-                                      : Styles.orangeColor,
+                                      : Styles.blue,
                                 ),
                               ),
                             ),
@@ -149,7 +149,7 @@ class TicketView extends StatelessWidget {
             ),
             //**** show the red part of the ticket ****
             Container(
-              color: isColor == null ? Styles.orangeColor : Colors.white,
+              color: isColor == null ? Styles.blue : Colors.white,
               child: Row(
                 children: [
                   SizedBox(
@@ -195,7 +195,7 @@ class TicketView extends StatelessWidget {
               padding: const EdgeInsets.only(
                   left: 16, right: 16, top: 10, bottom: 16),
               decoration: BoxDecoration(
-                color: isColor == null ? Styles.orangeColor : Colors.white,
+                color: isColor == null ? Styles.blue : Colors.white,
                 borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(isColor == null ? 21 : 0),
                   bottomRight: Radius.circular(isColor == null ? 21 : 0),

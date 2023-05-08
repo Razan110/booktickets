@@ -21,14 +21,14 @@ class HotelView extends StatelessWidget {
       margin: const EdgeInsets.only(top: 5, right: 16),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(24),
-        color: Color(0xB9FEF8F8),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.shade200,
-            blurRadius: 20,
-            spreadRadius: 5,
-          ),
-        ],
+        color: const Color(0xFFE8E8E8),
+        // boxShadow: [
+        //   BoxShadow(
+        //     color: Colors.grey.shade200,
+        //     blurRadius: 20,
+        //     spreadRadius: 5,
+        //   ),
+        // ],
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -53,24 +53,32 @@ class HotelView extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(hotel['place'], style: Styles.headLineStyle2),
+                Text(hotel['place'],
+                    style: Styles.headLineStyle2
+                        .copyWith(color: Styles.bgColor)),
                 Gap(AppLayout.getHeight(10)),
                 Row(
                   children: [
                     Text(
                       hotel['destinatin'],
-                      style: Styles.textStyleSmall.copyWith(color: Colors.grey),
+                      style: Styles.textStyleSmall.copyWith(
+                          color: Styles.primaryColor,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 17),
                     ),
                     Gap(AppLayout.getWidth(10)),
-                    Text("${hotel['price']}\$ per night",
-                        style: Styles.textStyleSmall),
+                    Text(
+                      "${hotel['price']}\$ per night",
+                      style: Styles.textStyleSmall
+                          .copyWith(color: Styles.bgColor),
+                    ),
                   ],
                 ),
-                Gap(AppLayout.getHeight(5)),
+                //Gap(AppLayout.getHeight(0)),
                 Text(
                   hotel['review'],
-                  style: Styles.textStyleSmall
-                      .copyWith(fontWeight: FontWeight.bold),
+                  style: Styles.textStyleSmall.copyWith(
+                      fontWeight: FontWeight.bold, color: Styles.bgColor),
                 ),
                 Image.asset(
                   hotel['rating'],

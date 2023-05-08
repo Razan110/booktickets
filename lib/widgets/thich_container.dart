@@ -13,7 +13,7 @@ class ThichContainer extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
         border: Border.all(
           width: 2.5,
-          color: isColor == null ? Colors.white : Styles.orangeColor,
+          color: isColor == null ? Colors.white : Styles.blue,
         ),
       ),
     );

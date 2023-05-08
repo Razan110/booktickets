@@ -16,7 +16,7 @@ class TicketsTabs extends StatelessWidget {
         padding: const EdgeInsets.all(3.5),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(50),
-          color: Styles.contanierBg,
+          color: Styles.baig,
         ),
         child: Row(
           children: [
@@ -44,7 +44,7 @@ class TicketsTabs extends StatelessWidget {
                   topRight: Radius.circular(AppLayout.getHeight(21)),
                   bottomRight: Radius.circular(AppLayout.getHeight(21)),
                 ),
-                color: Styles.contanierBg,
+                color: Styles.baig,
               ),
               child: Center(child: Text(secondTap)),
             ),

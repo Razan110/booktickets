@@ -82,10 +82,14 @@ List<Map<String, dynamic>> moreForUList = [
   {
     'DisctiptionHeadLin': 'Extended stays',
     'Disctiption': 'Live your life anywhere with\n30+night stays',
+    'Link': 'https://www.extendedstayamerica.com',
     'DisctiptionHeadLin2': 'Save 15% worldwide',
     'Disctiption2': 'Discover dream destinations\nfor less with Gateaway Deals',
+    'Link2':
+        'https://www.booking.com/extended-stays/index.en-us.html?label=gen173bo-18EgdmbGlnaHRzGOgHKIICOOgHSAliAlhYaMQBkgECWFjCAQRPUyBY2AED8gECWFj4AQGiAg93d3cuYm9va2luZy5jb22oAgO4Avy23qIGwAIB0gIkMzA5MjBkYWYtN2YxZC00NmZhLWI3MTUtZjA1YzgyMjQxNTQy2AIB6gIETUFURQ&aid=7981695&b_merch_cta=1',
     'DisctiptionHeadLin3': 'Travel articles',
     'Disctiption3': 'Live your life anywhere\nwith 60+ night stays',
+    'Link3': 'https://community.booking.com/?profile.language=en',
   },
 ];
 

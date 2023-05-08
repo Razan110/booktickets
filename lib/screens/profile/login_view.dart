@@ -38,13 +38,13 @@ class _LoginState extends State<LoginView> {
         preferredSize: const Size.fromHeight(10.0),
         child: AppBar(
           elevation: 0,
-          backgroundColor: Colors.white,
+          backgroundColor: Styles.darkGrayColor,
         ),
       ),
       body: ListView(
         children: [
           Container(
-            //decoration: BoxDecoration(color: Styles.bgColor),
+            decoration: BoxDecoration(color: Styles.grayColor),
             child: Column(
               children: [
                 Container(
@@ -52,7 +52,7 @@ class _LoginState extends State<LoginView> {
                     left: 15,
                     right: 15,
                   ),
-                  decoration: const BoxDecoration(color: Colors.white),
+                  decoration: BoxDecoration(color: Styles.darkGrayColor),
                   child: Column(
                     children: [
                       Gap(AppLayout.getHeight(10)),
@@ -77,7 +77,8 @@ class _LoginState extends State<LoginView> {
                               controller: _email,
                               decoration: InputDecoration(
                                 hintText: 'Email adress',
-                                hintStyle: Styles.headLineStyle4,
+                                hintStyle: Styles.headLineStyle4
+                                    .copyWith(color: Styles.wightTextColor),
                                 enabledBorder: const OutlineInputBorder(
                                   borderSide: BorderSide(
                                     width: 1,
@@ -90,8 +91,11 @@ class _LoginState extends State<LoginView> {
                             TextField(
                               controller: _password,
                               decoration: InputDecoration(
+                                labelStyle: Styles.textStyle
+                                    .copyWith(color: Styles.wightTextColor),
                                 hintText: 'Password',
-                                hintStyle: Styles.headLineStyle4,
+                                hintStyle: Styles.headLineStyle4
+                                    .copyWith(color: Styles.wightTextColor),
                                 enabledBorder: const OutlineInputBorder(
                                   borderSide: BorderSide(
                                     width: 1,

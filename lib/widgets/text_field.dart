@@ -29,7 +29,7 @@ class TextFieldContainer extends StatelessWidget {
                 enabledBorder: UnderlineInputBorder(
                   borderSide: BorderSide(
                     width: 1,
-                    color: Styles.orangeColor,
+                    color: Styles.blue,
                   ),
                 ),
               ),

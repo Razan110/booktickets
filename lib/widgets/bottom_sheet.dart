@@ -1,3 +1,4 @@
+import 'package:booktickets/utilities/styles/app_layout.dart';
 import 'package:booktickets/utilities/styles/app_styles.dart';
 import 'package:flutter/material.dart';
 
@@ -26,7 +27,7 @@ class BottomSheetB extends StatelessWidget {
         children: [
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-              backgroundColor: Styles.bgColor,
+              backgroundColor: Styles.darkGrayColor,
               padding: EdgeInsets.symmetric(
                 horizontal: bottomSheetHight,
                 vertical: bottomSheetWidth,
@@ -41,15 +42,15 @@ class BottomSheetB extends StatelessWidget {
               // adding some properties
               showModalBottomSheet(
                 context: context,
-                // color is applied to main screen when modal bottom screen is displayed
-                // barrierColor: Color.fromARGB(255, 6, 58, 33),
-                //background color for modal bottom screen
-                backgroundColor: Styles.contanierBg,
+                backgroundColor: Styles.lightContainer,
                 //elevates modal bottom screen
                 elevation: 10,
-                // gives rounded corner to modal bottom screen
+
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10.0),
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(AppLayout.getHeight(21)),
+                    bottomRight: Radius.circular(AppLayout.getHeight(21)),
+                  ),
                 ),
                 builder: (BuildContext context) {
                   // UDE : SizedBox instead of Container for whitespaces
@@ -69,7 +70,8 @@ class BottomSheetB extends StatelessWidget {
             },
             child: Text(
               bottomSheetText,
-              style: Styles.headLineStyle2.copyWith(color: Styles.orangeColor),
+              style:
+                  Styles.headLineStyle2.copyWith(color: Styles.wightTextColor),
             ),
           ),
         ],

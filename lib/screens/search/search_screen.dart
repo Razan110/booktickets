@@ -3,7 +3,7 @@ import 'package:booktickets/screens/search/airline_tickets.dart';
 import 'package:booktickets/utilities/app_info_list.dart';
 import 'package:booktickets/utilities/styles/app_layout.dart';
 import 'package:booktickets/utilities/styles/app_styles.dart';
-import 'package:booktickets/widgets/search_more_forU.dart';
+import 'package:booktickets/widgets/more_for_u.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
@@ -23,7 +23,7 @@ class _SearchScreenState extends State<SearchScreen> {
         preferredSize: const Size.fromHeight(10.0),
         child: AppBar(
           elevation: 0,
-          backgroundColor: Styles.tranColor,
+          backgroundColor: Styles.darkGrayColor,
         ),
       ),
       backgroundColor: Styles.bgColor,
@@ -54,13 +54,13 @@ class _SearchScreenState extends State<SearchScreen> {
 
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Styles.orangeColor,
+                      backgroundColor: Styles.darkGrayColor,
                       fixedSize: const Size(400, 50),
                     ),
                     child: Text(
                       _showHotelWidghet
                           ? 'Tap to search hotels'
-                          : 'Arline Tickets',
+                          : 'Back to arline tickets',
                       style: Styles.headLineStyle.copyWith(color: Colors.white),
                     ),
                     onPressed: () {
@@ -71,7 +71,7 @@ class _SearchScreenState extends State<SearchScreen> {
                   ),
                 ],
               ),
-              Gap(AppLayout.getHeight(30)),
+              Gap(AppLayout.getHeight(10)),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [

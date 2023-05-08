@@ -2,6 +2,7 @@ import 'package:booktickets/screens/home/home_screen.dart';
 import 'package:booktickets/screens/profile/profile_screen.dart';
 import 'package:booktickets/screens/search/search_screen.dart';
 import 'package:booktickets/screens/tickets/tickets_screen.dart';
+import 'package:booktickets/utilities/styles/app_styles.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 
@@ -39,9 +40,11 @@ class _BottomBarState extends State<BottomBar> {
         elevation: 10,
         showSelectedLabels: false,
         showUnselectedLabels: false,
-        selectedItemColor: const Color.fromARGB(255, 26, 54, 67),
+        selectedItemColor: Styles.lightBlue,
         type: BottomNavigationBarType.fixed,
-        unselectedItemColor: const Color(0xff526480),
+        unselectedItemColor: const Color.fromARGB(255, 255, 255, 255),
+        backgroundColor: Styles.darkGrayColor,
+
         // ignore: prefer_const_literals_to_create_immutables
         items: [
           const BottomNavigationBarItem(

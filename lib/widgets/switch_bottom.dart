@@ -35,10 +35,10 @@ class _SwitchBottomState extends State<SwitchBottom> {
             width: AppLayout.getWidth(1),
           ),
           toggleBorder: Border.all(
-            color: Styles.contanierBg,
+            color: Styles.lightContainer,
             width: AppLayout.getWidth(10),
           ),
-          activeColor: Styles.orangeColor,
+          activeColor: Styles.blue,
           inactiveColor: Styles.grayColor,
           onToggle: (val) {
             setState(

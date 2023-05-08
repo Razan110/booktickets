@@ -3,6 +3,7 @@ import 'package:booktickets/utilities/styles/app_layout.dart';
 import 'package:booktickets/widgets/text_field.dart';
 import 'package:booktickets/widgets/tickets_view.dart';
 import 'package:booktickets/utilities/app_info_list.dart';
+import 'package:booktickets/widgets/view_all.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:booktickets/utilities/styles/app_styles.dart';
@@ -18,7 +19,7 @@ class HomeScreen extends StatelessWidget {
         preferredSize: const Size.fromHeight(10.0),
         child: AppBar(
           elevation: 0,
-          backgroundColor: Styles.tranColor,
+          backgroundColor: Styles.darkGrayColor,
         ),
       ),
       backgroundColor: Styles.bgColor,
@@ -72,9 +73,9 @@ class HomeScreen extends StatelessWidget {
                     ),
                     child: Row(
                       children: [
-                        const Icon(
+                        Icon(
                           FluentSystemIcons.ic_fluent_search_regular,
-                          color: Color(0xffbfc205),
+                          color: Styles.blue,
                         ),
                         Gap(AppLayout.getWidth(9)),
                         Expanded(
@@ -83,7 +84,7 @@ class HomeScreen extends StatelessWidget {
                               hintText: 'Search',
                               hintStyle: TextStyle(
                                 fontWeight: FontWeight.w300,
-                                color: Styles.grayColor,
+                                color: Styles.darkGrayColor,
                               ),
                               border: InputBorder.none,
                             ),
@@ -107,7 +108,7 @@ class HomeScreen extends StatelessWidget {
                         child: Text(
                           'View all',
                           style: Styles.textStyle
-                              .copyWith(color: Styles.primaryColor),
+                              .copyWith(color: Styles.lightBlue),
                         ),
                       ),
                     ],
@@ -132,14 +133,13 @@ class HomeScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text('Hotels', style: Styles.headLineStyle2),
-                  InkWell(
+                  GestureDetector(
                     onTap: () {
-                      print('You Tapped!!');
+                      ViewAll();
                     },
                     child: Text(
                       'View all',
-                      style:
-                          Styles.textStyle.copyWith(color: Styles.primaryColor),
+                      style: Styles.textStyle.copyWith(color: Styles.lightBlue),
                     ),
                   )
                 ],
