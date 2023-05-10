@@ -100,14 +100,14 @@ class _CheckBoxContainerState extends State<CheckBoxContainer> {
 
               const TextFieldContainer(
                 hintTextC: 'Where from?',
-                icon: Icons.flight_takeoff,
+                icon: Icons.flight_takeoff, controller: null,
               ),
 
               Gap(AppLayout.getWidth(5)),
 
               const TextFieldContainer(
                 hintTextC: 'Where to?',
-                icon: Icons.flight_land_outlined,
+                icon: Icons.flight_land_outlined, controller: null,
               ),
               //Date
 
@@ -144,7 +144,7 @@ class _CheckBoxContainerState extends State<CheckBoxContainer> {
                 child: Row(
                   children: [
                     DropdownButton<String>(
-                      dropdownColor: Styles.baig,
+                      dropdownColor: Styles.wightColor,
                       hint: const Text('Cabin class'),
                       value: currentValue,
                       items: cabin.map((cabin) {

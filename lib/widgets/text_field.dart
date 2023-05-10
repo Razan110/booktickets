@@ -6,8 +6,10 @@ import 'package:gap/gap.dart';
 class TextFieldContainer extends StatelessWidget {
   final String hintTextC;
   final IconData? icon;
+  final Color? iconColor;
+  final TextEditingController? controller;
   const TextFieldContainer(
-      {Key? key, required this.hintTextC, required this.icon})
+      {Key? key, required this.hintTextC, required this.icon, this.iconColor, required this.controller})
       : super(key: key);
 
   @override
@@ -16,10 +18,14 @@ class TextFieldContainer extends StatelessWidget {
       margin: const EdgeInsets.only(top: 10, left: 16),
       child: Row(
         children: [
-          Icon(icon),
+          Icon(
+            icon,
+            color: iconColor,
+          ),
           Gap(AppLayout.getWidth(25)),
           Expanded(
             child: TextField(
+              controller: controller,
               decoration: InputDecoration(
                 hintText: hintTextC,
                 hintStyle: TextStyle(

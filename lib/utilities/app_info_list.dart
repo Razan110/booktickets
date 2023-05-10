@@ -46,7 +46,11 @@ List<Map<String, dynamic>> ticketList = [
     'hours': '8H 30M',
     'date': '1 May',
     'departureTime': '08:00 AM',
-    'number': 23
+    'number': 23,
+    'stops': '1',
+    'companies':
+        'We Air, Opreated by We Air Malta, Lion, Opreated by Lion Air Malta ',
+    'total': '\$159',
   },
   {
     'from': {
@@ -60,7 +64,29 @@ List<Map<String, dynamic>> ticketList = [
     'hours': '15H 30M',
     'date': '2 May',
     'departureTime': '09:00 AM',
-    'number': 24
+    'number': 24,
+    'stops': '0',
+    'companies':
+        'We Air, Opreated by We Air Malta, Lion, Opreated by Lion Air Malta ',
+    'total': '\$190',
+  },
+  {
+    'from': {
+      'code': 'JED',
+      'name': 'Jeddah',
+    },
+    'to': {
+      'code': 'LDN',
+      'name': 'London',
+    },
+    'hours': '17H 30M',
+    'date': '9 May',
+    'departureTime': '04:00 AM',
+    'number': 29,
+    'stops': '1',
+    'companies':
+        'We Air, Opreated by We Air Malta, Lion, Opreated by Lion Air Malta ',
+    'total': '\$188',
   },
   {
     'from': {
@@ -74,7 +100,83 @@ List<Map<String, dynamic>> ticketList = [
     'hours': '1H 30M',
     'date': '4 May',
     'departureTime': '11:00 AM',
-    'number': 29
+    'number': 29,
+    'stops': '2',
+    'companies':
+        'We Air, Opreated by We Air Malta, Lion, Opreated by Lion Air Malta ',
+    'total': '\$190',
+  },
+  {
+    'from': {
+      'code': 'NYC',
+      'name': 'New-York',
+    },
+    'to': {
+      'code': 'LDN',
+      'name': 'London',
+    },
+    'hours': '8H 30M',
+    'date': '1 May',
+    'departureTime': '08:00 AM',
+    'number': 23,
+    'stops': '1',
+    'companies':
+        'We Air, Opreated by We Air Malta, Lion, Opreated by Lion Air Malta ',
+    'total': '\$109',
+  },
+  {
+    'from': {
+      'code': 'RUH',
+      'name': 'Riyadh',
+    },
+    'to': {
+      'code': 'LDN',
+      'name': 'London',
+    },
+    'hours': '15H 30M',
+    'date': '2 May',
+    'departureTime': '09:00 AM',
+    'number': 24,
+    'stops': '0',
+    'companies':
+        'We Air, Opreated by We Air Malta, Lion, Opreated by Lion Air Malta ',
+    'total': '\$189',
+  },
+  {
+    'from': {
+      'code': 'JED',
+      'name': 'Jeddah',
+    },
+    'to': {
+      'code': 'LDN',
+      'name': 'London',
+    },
+    'hours': '17H 30M',
+    'date': '9 May',
+    'departureTime': '04:00 AM',
+    'number': 29,
+    'stops': '1',
+    'companies':
+        'We Air, Opreated by We Air Malta, Lion, Opreated by Lion Air Malta ',
+    'total': '\$149',
+  },
+  {
+    'from': {
+      'code': 'RUH',
+      'name': 'Riyadh',
+    },
+    'to': {
+      'code': 'DMM',
+      'name': 'Damam',
+    },
+    'hours': '1H 30M',
+    'date': '4 May',
+    'departureTime': '11:00 AM',
+    'number': 29,
+    'stops': '2',
+    'companies':
+        'We Air, Opreated by We Air Malta, Lion, Opreated by Lion Air Malta ',
+    'total': '\$199',
   },
 ];
 

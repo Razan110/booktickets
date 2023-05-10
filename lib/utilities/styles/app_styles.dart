@@ -6,10 +6,10 @@ class Styles {
   static Color primaryColor = primary;
   static Color wightTextColor = const Color(0xFFFFFFFF);
   static Color bgColor = const Color(0xFF000000);
-  //static Color bgColorDark = const Color(0xFF18184C);
+  static Color blackTextColor = const Color(0xFF000000);
   static Color grayColor = const Color(0xFFBEBEBE);
   static Color lightGrayColor = const Color(0xFFD8D8D8);
-  static Color baig = const Color(0xfff4f6fd);
+  static Color wightColor = const Color(0xfff4f6fd);
   static Color checkBoxColor = const Color(0xff526799);
   static Color tranColor = const Color(0x00FDFEFE);
   static Color links = const Color(0xFF213AF3);
@@ -17,6 +17,7 @@ class Styles {
   static Color blue = const Color(0xFF78B2CD);
   static Color lightBlue = const Color(0xFFC4ECFF);
   static Color lightContainer = const Color(0xFFF3F3F3);
+  static Color transparentWight = Color.fromARGB(48, 255, 255, 255);
   static TextStyle textStyle = TextStyle(
     fontSize: 16,
     color: wightTextColor,

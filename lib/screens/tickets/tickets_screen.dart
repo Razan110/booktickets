@@ -54,16 +54,22 @@ class TicketsScreen extends StatelessWidget {
                   children: [
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: const [
+                      children: [
                         TicketColumntLayout(
                           firstText: 'Flutter DB',
                           secondText: 'Passenger',
                           alignment: CrossAxisAlignment.start,
+                          firstTextStyle: Styles.headLineStyle3
+                              .copyWith(color: Colors.black),
+                          secondTextStyle: Styles.notBoldheadLineStyle4,
                         ),
                         TicketColumntLayout(
                           firstText: '5221 435268',
                           secondText: 'Passport',
                           alignment: CrossAxisAlignment.end,
+                          firstTextStyle: Styles.headLineStyle3
+                              .copyWith(color: Colors.black),
+                          secondTextStyle: Styles.notBoldheadLineStyle4,
                         ),
                       ],
                     ),
@@ -75,16 +81,22 @@ class TicketsScreen extends StatelessWidget {
                     Gap(AppLayout.getHeight(20)),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: const [
+                      children: [
                         TicketColumntLayout(
                           firstText: '0055 444 77147',
                           secondText: 'Number of E-ticket',
                           alignment: CrossAxisAlignment.start,
+                          firstTextStyle: Styles.headLineStyle3
+                              .copyWith(color: Colors.black),
+                          secondTextStyle: Styles.notBoldheadLineStyle4,
                         ),
                         TicketColumntLayout(
                           firstText: 'B2SG28',
                           secondText: 'Booking code',
                           alignment: CrossAxisAlignment.end,
+                          firstTextStyle: Styles.headLineStyle3
+                              .copyWith(color: Colors.black),
+                          secondTextStyle: Styles.notBoldheadLineStyle4,
                         ),
                       ],
                     ),
@@ -115,10 +127,13 @@ class TicketsScreen extends StatelessWidget {
                                 style: Styles.notBoldheadLineStyle4)
                           ],
                         ),
-                        const TicketColumntLayout(
+                        TicketColumntLayout(
                           firstText: '\$249.99',
                           secondText: 'Price',
                           alignment: CrossAxisAlignment.end,
+                          firstTextStyle: Styles.headLineStyle3
+                              .copyWith(color: Colors.black),
+                          secondTextStyle: Styles.notBoldheadLineStyle4,
                         ),
                       ],
                     ),
@@ -147,7 +162,7 @@ class TicketsScreen extends StatelessWidget {
                       data: 'http://github,com/martinovovo',
                       barcode: Barcode.code128(),
                       drawText: false,
-                      color: Styles.wightTextColor,
+                      color: Styles.bgColor,
                       width: double.infinity,
                       height: 70,
                     ),

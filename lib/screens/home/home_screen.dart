@@ -1,4 +1,6 @@
 import 'package:booktickets/screens/home/hotel_view.dart';
+import 'package:booktickets/screens/home/hotels-viweAll.dart';
+import 'package:booktickets/screens/home/upcoming_flights.dart';
 import 'package:booktickets/utilities/styles/app_layout.dart';
 import 'package:booktickets/widgets/text_field.dart';
 import 'package:booktickets/widgets/tickets_view.dart';
@@ -103,7 +105,11 @@ class HomeScreen extends StatelessWidget {
                       ),
                       InkWell(
                         onTap: () {
-                          print('You Tapped!!');
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                       UpcomingFlights()));
                         },
                         child: Text(
                           'View all',
@@ -135,7 +141,12 @@ class HomeScreen extends StatelessWidget {
                   Text('Hotels', style: Styles.headLineStyle2),
                   GestureDetector(
                     onTap: () {
-                      ViewAll();
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const HotelsViewAll(),
+                        ),
+                      );
                     },
                     child: Text(
                       'View all',

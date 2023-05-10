@@ -104,6 +104,7 @@ class _HotelContainerState extends State<HotelContainer> {
               const TextFieldContainer(
                 hintTextC: 'City',
                 icon: Icons.location_city_outlined,
+                controller: null,
               ),
 
               Gap(AppLayout.getHeight(5)),
