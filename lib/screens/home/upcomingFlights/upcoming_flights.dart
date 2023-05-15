@@ -1,6 +1,6 @@
 import 'package:booktickets/utilities/app_info_list.dart';
 import 'package:booktickets/utilities/styles/app_styles.dart';
-import 'package:booktickets/widgets/flights_column.dart';
+import 'package:booktickets/screens/home/upcomingFlights/flights_column.dart';
 import 'package:flutter/material.dart';
 
 class UpcomingFlights extends StatelessWidget {

@@ -1,4 +1,4 @@
-import 'package:booktickets/screens/home/hotels_search.dart';
+import 'package:booktickets/screens/home/hotels/hotels_search.dart';
 import 'package:booktickets/utilities/styles/app_layout.dart';
 import 'package:booktickets/utilities/styles/app_styles.dart';
 import 'package:booktickets/widgets/text_field.dart';
@@ -70,6 +70,7 @@ class _HotelsViewAllState extends State<HotelsViewAll> {
                       icon: Icons.pin_drop_outlined,
                       iconColor: Styles.wightColor,
                       controller: _destination,
+                      isColor: true,
                     ),
                     Gap(AppLayout.getWidth(10)),
                     TextFieldContainer(
@@ -77,6 +78,7 @@ class _HotelsViewAllState extends State<HotelsViewAll> {
                       icon: Icons.calendar_month_outlined,
                       iconColor: Styles.wightColor,
                       controller: _date,
+                      isColor: true,
                     ),
                     Gap(AppLayout.getWidth(10)),
                     TextFieldContainer(
@@ -84,6 +86,7 @@ class _HotelsViewAllState extends State<HotelsViewAll> {
                       icon: Icons.person_add_alt_sharp,
                       iconColor: Styles.wightColor,
                       controller: _guests,
+                      isColor: true,
                     ),
                   ],
                 ),
@@ -123,5 +126,3 @@ class _HotelsViewAllState extends State<HotelsViewAll> {
     );
   }
 }
-
-class London {}

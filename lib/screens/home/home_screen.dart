@@ -1,6 +1,6 @@
-import 'package:booktickets/screens/home/hotel_view.dart';
-import 'package:booktickets/screens/home/hotels-viweAll.dart';
-import 'package:booktickets/screens/home/upcoming_flights.dart';
+import 'package:booktickets/screens/home/hotels/hotel_view.dart';
+import 'package:booktickets/screens/home/hotels/hotels-viweAll.dart';
+import 'package:booktickets/screens/home/upcomingFlights/upcoming_flights.dart';
 import 'package:booktickets/utilities/styles/app_layout.dart';
 import 'package:booktickets/widgets/text_field.dart';
 import 'package:booktickets/widgets/tickets_view.dart';

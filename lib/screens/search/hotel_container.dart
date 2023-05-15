@@ -105,6 +105,7 @@ class _HotelContainerState extends State<HotelContainer> {
                 hintTextC: 'City',
                 icon: Icons.location_city_outlined,
                 controller: null,
+                isColor: null,
               ),
 
               Gap(AppLayout.getHeight(5)),

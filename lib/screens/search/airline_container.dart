@@ -36,7 +36,7 @@ class _CheckBoxContainerState extends State<CheckBoxContainer> {
       margin: const EdgeInsets.only(left: 1, right: 1, top: 1, bottom: 1),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(5),
-        color: Styles.lightContainer,
+        color: Colors.white,
       ),
       child: Column(
         children: [
@@ -100,14 +100,18 @@ class _CheckBoxContainerState extends State<CheckBoxContainer> {
 
               const TextFieldContainer(
                 hintTextC: 'Where from?',
-                icon: Icons.flight_takeoff, controller: null,
+                icon: Icons.flight_takeoff,
+                controller: null,
+                isColor: null,
               ),
 
               Gap(AppLayout.getWidth(5)),
 
               const TextFieldContainer(
                 hintTextC: 'Where to?',
-                icon: Icons.flight_land_outlined, controller: null,
+                icon: Icons.flight_land_outlined,
+                controller: null,
+                isColor: null,
               ),
               //Date
 

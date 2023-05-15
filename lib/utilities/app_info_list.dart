@@ -1,4 +1,3 @@
-import 'package:booktickets/screens/search/airline_tickets.dart';
 
 List<Map<String, dynamic>> hotelList = [
   {
@@ -192,12 +191,5 @@ List<Map<String, dynamic>> moreForUList = [
     'DisctiptionHeadLin3': 'Travel articles',
     'Disctiption3': 'Live your life anywhere\nwith 60+ night stays',
     'Link3': 'https://community.booking.com/?profile.language=en',
-  },
-];
-
-List<Map<String, dynamic>> togleBar = [
-  {
-    'searchFirst': const AirlineTickets(),
-    'searchSecond': const AirlineTickets(),
   },
 ];
